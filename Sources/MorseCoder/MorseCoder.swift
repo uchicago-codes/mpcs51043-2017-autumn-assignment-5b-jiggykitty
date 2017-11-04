@@ -5,7 +5,7 @@ struct MorseCoder {
   var letterDictionary: [String : Character] = [:]
   var supportedCharacters: [Character] = []
 
-  init(codeTablePath: String) throws {
+  public init(codeTablePath: String) throws {
     do {
       let rawCodeDictionary = try String(contentsOfFile: codeTablePath)
       for line in rawCodeDictionary.components(separatedBy: CharacterSet.newlines) {
@@ -29,7 +29,7 @@ struct MorseCoder {
     }
   }
 
-  func encode(word: String) -> String {
+  public func encode(word: String) -> String {
     var output: String = ""
     for character in word {
       if let code = self.codeDictionary[character] {
@@ -42,7 +42,7 @@ struct MorseCoder {
     return output
   }
 
-  func decode(code: String) -> String {
+  public func decode(code: String) -> String {
     var output: String = ""
     for code in code.components(separatedBy: CharacterSet.whitespaces) {
       if let letter = self.letterDictionary[code] {
@@ -55,7 +55,7 @@ struct MorseCoder {
     return output
   }
 
-  func isEnglish(input: String) -> Bool {
+  public func isEnglish(input: String) -> Bool {
     if input.contains(where: {supportedCharacters.contains($0)}) {
       return true
     }
