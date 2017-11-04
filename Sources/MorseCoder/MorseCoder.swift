@@ -1,6 +1,6 @@
 import Foundation
 
-struct MorseCode {
+struct MorseCoder {
   var codeDictionary: [Character : String] = [:]
   var letterDictionary: [String : Character] = [:]
   var supportedCharacters: [Character] = []
