@@ -1,12 +1,12 @@
 import XCTest
-@testable import MorseCode
+@testable import MorseCoder
 
-class MorseCodeTests: XCTestCase {
+class MorseCoderTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(MorseCode().text, "Hello, World!")
+        XCTAssertEqual(MorseCoder().text, "Hello, World!")
     }
 
 

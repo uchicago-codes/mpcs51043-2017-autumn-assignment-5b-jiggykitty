@@ -1,6 +1,6 @@
 import XCTest
-@testable import MorseCodeTests
+@testable import MorseCoderTests
 
 XCTMain([
-    testCase(MorseCodeTests.allTests),
+    testCase(MorseCoderTests.allTests),
 ])
